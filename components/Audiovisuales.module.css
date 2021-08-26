@@ -9,26 +9,28 @@
 
 .carrusel {
   justify-self: center;
-  /* background-color: aqua; */
-  /* padding-top: 30px; */
 }
 
 .boton {
   color: rgb(212, 212, 212);
   position: absolute;
   z-index: 2;
-  /* top: calc(50% - 15px); */
   top: 0;
-  width: 30;
+  /* width: 30; */
   height: 100%;
   text-align: center;
+  text-justify: center;
   cursor: pointer;
   border: none;
-  background-color: rgb(0,0,0,0);
-  font-size: 20px;
+  background-color: rgb(0, 0, 0, 0);
 }
 
 .boton:hover {
   color: white;
   background-color: rgba(126, 126, 126, 0.1);
+}
+
+.boton span {
+  /* font-size: 36px; */
+  width: 100%;
 }

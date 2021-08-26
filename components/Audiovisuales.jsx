@@ -8,23 +8,6 @@ const videos = [
   { src: "https://www.youtube.com/embed/hNx78lOYRvg" },
 ];
 
-const arrowStyles = {
-  position: "absolute",
-  zIndex: 2,
-  top: "calc(50% - 15px)",
-  width: 30,
-  height: 30,
-  cursor: "pointer",
-  border: "none",
-  // color: "white",
-  backgroundColor: "black",
-  fontSize: "20px",
-  // ":hover": {
-  //   color: "red",
-  //   backgroundColor: "white",
-  // },
-};
-
 export default function Audiovisuales() {
   return (
     <section id="audiovisuales" className={styles.contenedor}>
@@ -35,29 +18,29 @@ export default function Audiovisuales() {
         statusFormatter={(current, total) =>
           `Current slide: ${current} / Total: ${total}`
         }
-        renderArrowPrev={(onClickHandler, hasPrev, label) =>
+        renderArrowPrev={(onClickHandler, hasPrev) =>
           hasPrev && (
             <button
               type="button"
               className={styles.boton}
               onClick={onClickHandler}
-              title={label}
+              title="Anterior"
               style={{ left: 5 }}
             >
-              ◄
+              <span className="material-icons-two-tone">arrow_back_ios</span>
             </button>
           )
         }
-        renderArrowNext={(onClickHandler, hasNext, label) =>
+        renderArrowNext={(onClickHandler, hasNext) =>
           hasNext && (
             <button
               type="button"
               className={styles.boton}
               onClick={onClickHandler}
-              title={label}
+              title="Siguiente"
               style={{ right: 5 }}
             >
-              ►
+              <span className="material-icons-two-tone">arrow_forward_ios</span>
             </button>
           )
         }

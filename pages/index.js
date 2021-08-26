@@ -13,6 +13,10 @@ export default function Inicio() {
           href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
           rel="stylesheet"
         />
+        <link
+          href="https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone"
+          rel="stylesheet"
+        />
       </Head>
       <Portada />
       <Audiovisuales />
