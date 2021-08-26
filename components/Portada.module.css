@@ -1,0 +1,32 @@
+.contenedor {
+  height: 100vh;
+  background-color: black;
+}
+
+.video {
+  height: 100vh;
+  width: 80vw;
+  display: block;
+  margin: 0 auto;
+}
+
+/* 
+.mascara {
+  position: relative;
+  max-height: 50vh;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  mask-image: url("/static/svg/yunga.svg");
+}
+
+@media (max-width: 768px) {
+  .mascara {
+    max-height: 30vh;
+    transform: translateX(-50%) translateY(-50%) rotate(90deg);
+    mask-image: url("/static/svg/yunga-m.svg");
+    mask-size: 100%;
+    mask-repeat: no-repeat;
+    mask-position: center;
+  }
+} */

@@ -1,0 +1,25 @@
+.boton {
+    border: 0.13rem solid #e1e1e1;
+    background-color: rgba(0, 0, 0, 0);
+    color: #e1e1e1;
+    padding: 0.45rem 1.82rem;
+    font-family: "Arial", sans-serif;
+    letter-spacing: 0.3rem;
+    font-weight: 300;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    align-self: flex-end;
+    justify-self: center;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+  }
+  
+  .boton:hover {
+    transition: background-color 0.5s ease;
+    background-color: #e1e1e1;
+    transition: color 0.5s ease;
+    color: black;
+  }
