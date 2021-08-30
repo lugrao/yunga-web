@@ -24,6 +24,9 @@ export default function Inicio() {
       <Bio />
       <Contacto />
       <style jsx global>{`
+        html {
+          scroll-behavior: smooth;
+        }
         body {
           margin: 0;
         }

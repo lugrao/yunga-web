@@ -1,5 +1,5 @@
 .contenedor {
-  /* height: 50rem; */
+  /* height: 40rem; */
   display: grid;
   /* flex-direction: column; */
   background-image: url(/static/img/audiovisual.jpg);
@@ -9,6 +9,7 @@
 
 .carrusel {
   justify-self: center;
+  padding-bottom: 2rem;
 }
 
 .boton {

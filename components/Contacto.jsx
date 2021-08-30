@@ -20,30 +20,47 @@ export default function Contacto() {
       </form>
 
       <div className={styles.redes}>
-        <Image
-          src="/static/svg/redes/facebook.svg"
-          alt=""
-          height={50}
-          width={50}
-        />
-        <Image
-          src="/static/svg/redes/spotify.svg"
-          alt=""
-          height={50}
-          width={50}
-        />
-        <Image
-          src="/static/svg/redes/youtube.svg"
-          alt=""
-          height={50}
-          width={50}
-        />
-        <Image
-          src="/static/svg/redes/instagram.svg"
-          alt=""
-          height={50}
-          width={50}
-        />
+        <a href="https://www.facebook.com/yunga.audiovisual/" target="_blank">
+          <Image
+            src="/static/svg/redes/facebook.svg"
+            alt=""
+            height={50}
+            width={50}
+          />
+        </a>
+
+        <a
+          href="https://open.spotify.com/artist/6eD88Q8ph7zUGQvqAQBIjq"
+          target="_blank"
+        >
+          <Image
+            src="/static/svg/redes/spotify.svg"
+            alt=""
+            height={50}
+            width={50}
+          />
+        </a>
+
+        <a
+          href="https://www.youtube.com/channel/UC6mpjFP43E-xoeRP4lm1pNg"
+          target="_blank"
+        >
+          <Image
+            src="/static/svg/redes/youtube.svg"
+            alt=""
+            height={50}
+            width={50}
+          />
+        </a>
+
+        <a href="https://www.instagram.com/yunga.audiovisual/" target="_blank">
+          <Image
+            src="/static/svg/redes/instagram.svg"
+            alt=""
+            height={50}
+            width={50}
+          />
+        </a>
       </div>
     </section>
   );

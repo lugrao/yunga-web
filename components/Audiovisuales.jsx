@@ -14,6 +14,9 @@ export default function Audiovisuales() {
       <Titulo texto="Audiovisuales" />
       <Carousel
         showStatus={false}
+        showThumbs={false}
+        swipeable={true}
+        emulateTouch={true}
         className={styles.carrusel}
         statusFormatter={(current, total) =>
           `Current slide: ${current} / Total: ${total}`
@@ -45,17 +48,17 @@ export default function Audiovisuales() {
           )
         }
       >
-        {videos.map((video) => {
+        {videos.map((video, idx) => {
           return (
-            <div>
+            <div key={idx}>
               <iframe
                 width="1270"
                 height="480"
                 src={video.src}
                 title="YouTube video player"
-                frameborder="0"
+                frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen="allowfullscreen"
+                allowFullScreen="allowfullscreen"
                 mozallowfullscreen="mozallowfullscreen"
                 msallowfullscreen="msallowfullscreen"
                 oallowfullscreen="oallowfullscreen"
