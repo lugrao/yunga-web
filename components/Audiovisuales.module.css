@@ -1,15 +1,13 @@
 .contenedor {
-  /* height: 40rem; */
   display: grid;
-  /* flex-direction: column; */
   background-image: url(/static/img/audiovisual.jpg);
   background-position: center;
   background-size: cover;
+  padding-bottom: 5rem;
 }
 
 .carrusel {
   justify-self: center;
-  padding-bottom: 2rem;
 }
 
 .boton {
@@ -17,7 +15,6 @@
   position: absolute;
   z-index: 2;
   top: 0;
-  /* width: 30; */
   height: 100%;
   text-align: center;
   text-justify: center;
@@ -32,6 +29,9 @@
 }
 
 .boton span {
-  /* font-size: 36px; */
   width: 100%;
+}
+
+.img {
+  width: 50%;
 }

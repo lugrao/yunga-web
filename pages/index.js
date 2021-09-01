@@ -9,6 +9,7 @@ export default function Inicio() {
   return (
     <>
       <Head>
+        <title>Yunga</title>
         <link
           href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
           rel="stylesheet"

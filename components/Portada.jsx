@@ -1,14 +1,9 @@
 import styles from "./Portada.module.css";
 import Link from "next/link";
 import useWindowDimensions from "../hooks/useWindowDimensions.ts";
-// import { useEffect } from "react";
 
 export default function Portada() {
   const { width } = useWindowDimensions();
-
-  // useEffect(() => {
-  //   console.log(width);
-  // }, [width]);
 
   return (
     <section id="portada" className={styles.contenedor}>

@@ -1,10 +1,10 @@
 .contenedor {
   overflow: hidden;
-  /* height: 100vh; */
   display: grid;
   background-image: url(/static/img/contacto.jpg);
   background-position: center;
   background-size: cover;
+  padding-bottom: 5rem;
 }
 
 .formulario {
@@ -40,39 +40,26 @@
   border: 0;
 }
 
-/* .formulario h2 {
-  font-family: "Anton", sans-serif;
-  letter-spacing: 0.5em;
-  font-size: 1.6rem;
-
-  font-weight: 300;
+.boton {
+  border: 0.13rem solid #e1e1e1;
+  background-color: rgba(0, 0, 0, 0);
   color: #e1e1e1;
+  padding: 0.45rem 1.82rem;
+  font-family: "Arial", sans-serif;
+  letter-spacing: 0.3rem;
+  font-weight: 300;
   text-align: center;
-  margin-bottom: 50%;
-} */
-
-.formulario button {
-  display: block;
-  margin: 0 auto;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  justify-self: center;
+  text-transform: uppercase;
 }
 
-.redes {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin: 2.5rem 0 3rem;
+.boton:hover {
+  transition: background-color 0.5s ease;
+  background-color: #e1e1e1;
+  transition: color 0.5s ease;
+  color: black;
 }
-
-/* .iconoRed {
-  max-width: 2.5rem;
-  margin: 0 1rem;
-}
-
-.iconoRed:hover {
-  background-image: radial-gradient(
-    circle,
-    rgb(255, 255, 255, 0.3),
-    rgb(255, 255, 255, 0),
-    rgb(255, 255, 255, 0)
-  );
-} */

@@ -1,6 +1,5 @@
 import styles from "./Bio.module.css";
 import Titulo from "./Titulo";
-import Boton from "./Boton";
 
 export default function Bio() {
   function manejarClick() {
