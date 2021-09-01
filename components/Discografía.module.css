@@ -3,25 +3,47 @@
   background-position: center;
   background-size: cover;
   position: relative;
-  padding-bottom: 9.8rem;
+  padding-bottom: 5rem;
 }
 
-.contenedorImagenes {
+.contenedorObras {
   display: flex;
   gap: 2rem;
   width: 90%;
-  max-width: 50rem;
+  max-width: 80rem;
   margin: 0 auto;
-  padding: 5rem 0;
+  /* padding: 2rem 0; */
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-content: center;
 }
 
 .imagen {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   position: relative;
+}
+
+.texto {
+  font-family: "Anton", sans-serif;
+  letter-spacing: 0.2rem;
+  color: #e7e7e7;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.texto h2 {
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin: 0;
+  padding-top: 1rem;
+}
+
+.texto h3 {
+  font-size: 1.12rem;
+  font-weight: normal;
+  margin: 0;
 }
 
 .enlaces {
@@ -49,6 +71,10 @@
 }
 
 @media (max-width: 768px) {
+  .obra {
+    padding-bottom: 2rem;
+  }
+
   .imagen {
     width: 300px;
     height: 300px;

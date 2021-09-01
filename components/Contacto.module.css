@@ -12,6 +12,7 @@
   align-self: start;
   justify-self: center;
   width: 19rem;
+  height: 21.5rem;
 }
 
 .formulario input {
@@ -38,6 +39,17 @@
   margin: 0.7rem 0 1.7rem;
   padding: 0.3rem 0.6rem 0.3rem;
   border: 0;
+}
+
+.formulario h2 {
+  text-align: center;
+  align-self: center;
+  color: #ffffff;
+  font-family: sans-serif;
+  background-color: rgb(0, 0, 0, 0.27);
+  border-radius: 3px;
+  width: 60%;
+  margin: 0 auto;
 }
 
 .boton {
