@@ -1,6 +1,6 @@
-import styles from "./Discografía.module.css";
-import Titulo from "./Titulo";
-import Image from "next/image";
+import styles from "./Discografía.module.css"
+import Titulo from "./Titulo"
+import Image from "next/image"
 
 const obras = [
   {
@@ -21,7 +21,7 @@ const obras = [
     spotify: "https://open.spotify.com/album/0oVB5EnxfiZ3zhqL0emB5N",
     youtube: "https://youtu.be/Xgx9pg9h9Fc",
   },
-];
+]
 
 export default function Discografía() {
   return (
@@ -53,5 +53,5 @@ export default function Discografía() {
         ))}
       </div>
     </section>
-  );
+  )
 }
