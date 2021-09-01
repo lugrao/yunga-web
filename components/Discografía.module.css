@@ -12,7 +12,7 @@
   width: 90%;
   max-width: 80rem;
   margin: 0 auto;
-  /* padding: 2rem 0; */
+  padding: 2rem 0;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-content: center;
