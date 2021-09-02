@@ -29,6 +29,11 @@ const obras = [
 export default function Discografía() {
   return (
     <section id="discografia" className={styles.contenedorSeccion}>
+      <Image
+        src="/static/img/discografía.jpg"
+        layout="fill"
+        objectFit="cover"
+      />
       <Titulo texto="Discografía" />
       <div className={styles.contenedorObras}>
         {obras.map((obra, idx) => (

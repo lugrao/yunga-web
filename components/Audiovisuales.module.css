@@ -1,8 +1,9 @@
 .contenedor {
+  /* background-image: url(/static/img/audiovisual.jpg); */
+  /* background-position: center; */
+  /* background-size: cover; */
   display: grid;
-  background-image: url(/static/img/audiovisual.jpg);
-  background-position: center;
-  background-size: cover;
+  position: relative;
   padding-bottom: 5rem;
 }
 

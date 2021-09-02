@@ -1,7 +1,8 @@
+import { useState } from "react"
 import styles from "./Contacto.module.css"
+import Image from "next/image"
 import Titulo from "./Titulo"
 import Redes from "./Redes"
-import { useState } from "react"
 
 export default function Contacto() {
   const [nombre, setNombre] = useState("")
@@ -41,6 +42,7 @@ export default function Contacto() {
 
   return (
     <section id="contacto" className={styles.contenedor}>
+      <Image src="/static/img/contacto.jpg" layout="fill" objectFit="cover" />
       <Titulo texto="Contacto" />
 
       {!mensajeEnviado ? (

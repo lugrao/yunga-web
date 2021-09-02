@@ -1,13 +1,15 @@
 .contenedor {
   overflow: hidden;
   display: grid;
-  background-image: url(/static/img/contacto.jpg);
-  background-position: center;
-  background-size: cover;
+  /* background-image: url(/static/img/contacto.jpg); */
+  /* background-position: center; */
+  /* background-size: cover; */
+  position: relative;
   padding-bottom: 5rem;
 }
 
 .formulario {
+  position: relative;
   display: grid;
   align-self: start;
   justify-self: center;

@@ -1,7 +1,7 @@
 .contenedorSeccion {
-  background: url(/static/img/discografía.jpg);
-  background-position: center;
-  background-size: cover;
+  /* background: url(/static/img/discografía.jpg); */
+  /* background-position: center; */
+  /* background-size: cover; */
   position: relative;
   padding-bottom: 5rem;
 }
