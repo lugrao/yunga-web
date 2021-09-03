@@ -1,9 +1,10 @@
-import Head from "next/head";
-import Portada from "../components/Portada";
-import Audiovisuales from "../components/Audiovisuales";
-import Discografía from "../components/Discografía";
-import Bio from "../components/Bio";
-import Contacto from "../components/Contacto";
+import Head from "next/head"
+import Nav from "../components/Nav"
+import Portada from "../components/Portada"
+import Audiovisuales from "../components/Audiovisuales"
+import Discografía from "../components/Discografía"
+import Bio from "../components/Bio"
+import Contacto from "../components/Contacto"
 
 export default function Inicio() {
   return (
@@ -19,6 +20,7 @@ export default function Inicio() {
           rel="stylesheet"
         />
       </Head>
+      <Nav />
       <Portada />
       <Audiovisuales />
       <Discografía />
@@ -33,5 +35,5 @@ export default function Inicio() {
         }
       `}</style>
     </>
-  );
+  )
 }

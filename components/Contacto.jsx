@@ -33,7 +33,10 @@ export default function Contacto() {
       if (res.status === 200) {
         console.log("Mail enviado.")
         setMensajeEnviado(true)
-        console.log(res.status)
+        setNombre("")
+        setEmail("")
+        setTelefono("")
+        setConsulta("")
       } else {
         console.log(res.status)
       }
@@ -70,8 +73,11 @@ export default function Contacto() {
           <button className={styles.boton}>Enviar</button>
         </form>
       ) : (
-        <div className={styles.formulario}>
-          <h2>Una locura.</h2>
+        <div className={styles.enviado}>
+          <h2>
+            ¡Mensaje enviado!
+            <span onClick={() => setMensajeEnviado(false)}>x</span>
+          </h2>
         </div>
       )}
 
