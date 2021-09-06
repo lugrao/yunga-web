@@ -36,9 +36,9 @@ export default function Discografía() {
       />
       <Titulo texto="Discografía" />
       <div className={styles.contenedorObras}>
-        {obras.map((obra, idx) => (
-          <div className={styles.obra}>
-            <div key={idx} className={styles.imagen}>
+        {obras.map((obra, i) => (
+          <div key={i} className={styles.obra}>
+            <div className={styles.imagen}>
               <Image src={obra.foto} width="300" height="300" />
               <div className={styles.enlaces}>
                 <a href={obra.spotify} target="_blank" alt="Link a Spotify">
