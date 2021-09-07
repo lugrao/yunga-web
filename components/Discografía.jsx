@@ -33,6 +33,7 @@ export default function Discografía() {
         src="/static/img/discografía.jpg"
         layout="fill"
         objectFit="cover"
+        quality={100}
       />
       <Titulo texto="Discografía" />
       <div className={styles.contenedorObras}>

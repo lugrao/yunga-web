@@ -1,26 +1,26 @@
-import { useState } from "react"
-import styles from "./Contacto.module.css"
-import Image from "next/image"
-import Titulo from "./Titulo"
-import Redes from "./Redes"
+import { useState } from "react";
+import styles from "./Contacto.module.css";
+import Image from "next/image";
+import Titulo from "./Titulo";
+import Redes from "./Redes";
 
 export default function Contacto() {
-  const [nombre, setNombre] = useState("")
-  const [email, setEmail] = useState("")
-  const [telefono, setTelefono] = useState("")
-  const [consulta, setConsulta] = useState("")
-  const [mensajeEnviado, setMensajeEnviado] = useState(false)
+  const [nombre, setNombre] = useState("");
+  const [email, setEmail] = useState("");
+  const [telefono, setTelefono] = useState("");
+  const [consulta, setConsulta] = useState("");
+  const [mensajeEnviado, setMensajeEnviado] = useState(false);
 
   function enviarMail(event) {
-    event.preventDefault()
-    console.log("Enviando mail...")
+    event.preventDefault();
+    console.log("Enviando mail...");
 
     let mensaje = {
       nombre,
       email,
       telefono,
       consulta,
-    }
+    };
 
     fetch("/api/contacto", {
       method: "POST",
@@ -31,21 +31,26 @@ export default function Contacto() {
       body: JSON.stringify(mensaje),
     }).then((res) => {
       if (res.status === 200) {
-        console.log("Mail enviado.")
-        setMensajeEnviado(true)
-        setNombre("")
-        setEmail("")
-        setTelefono("")
-        setConsulta("")
+        console.log("Mail enviado.");
+        setMensajeEnviado(true);
+        setNombre("");
+        setEmail("");
+        setTelefono("");
+        setConsulta("");
       } else {
-        console.log(res.status)
+        console.log(res.status);
       }
-    })
+    });
   }
 
   return (
     <section id="contacto" className={styles.contenedor}>
-      <Image src="/static/img/contacto.jpg" layout="fill" objectFit="cover" />
+      <Image
+        src="/static/img/contacto.jpg"
+        layout="fill"
+        objectFit="cover"
+        quality={100}
+      />
       <Titulo texto="Contacto" />
 
       {!mensajeEnviado ? (
@@ -83,5 +88,5 @@ export default function Contacto() {
 
       <Redes />
     </section>
-  )
+  );
 }
