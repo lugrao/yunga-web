@@ -48,7 +48,6 @@
   top: 0;
   width: 100%;
   height: 3rem;
-  /* overflow: auto; */
 }
 
 .navMobileBarra {
@@ -60,7 +59,7 @@
 
 .navMobileMenu {
   float: right;
-  width: 15rem;
+  width: 11rem;
   transform-origin: top;
   transform: rotateX(-90deg);
   transition: 0.08s linear;
