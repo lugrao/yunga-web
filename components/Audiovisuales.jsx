@@ -1,22 +1,23 @@
-import styles from "./Audiovisuales.module.css";
-import Titulo from "./Titulo";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Image from "next/image";
+import styles from "./Audiovisuales.module.css"
+import Titulo from "./Titulo"
+import { Carousel } from "react-responsive-carousel"
+import "react-responsive-carousel/lib/styles/carousel.min.css"
+import Image from "next/image"
+import imagenFondo from "../public/static/img/audiovisual.jpg"
 
 const videos = [
   { src: "https://www.youtube.com/embed/Xgx9pg9h9Fc" },
   { src: "https://www.youtube.com/embed/hNx78lOYRvg" },
-];
+]
 
 export default function Audiovisuales() {
   return (
     <section id="audiovisuales" className={styles.contenedor}>
       <Image
-        src="/static/img/audiovisual.jpg"
+        src={imagenFondo}
         layout="fill"
+        placeholder="blur"
         objectFit="cover"
-        quality={100}
       />
       <Titulo texto="Audiovisuales" />
       <Carousel
@@ -72,9 +73,9 @@ export default function Audiovisuales() {
                 webkitallowfullscreen="webkitallowfullscreen"
               ></iframe>
             </div>
-          );
+          )
         })}
       </Carousel>
     </section>
-  );
+  )
 }

@@ -1,14 +1,20 @@
-import styles from "./Bio.module.css";
-import Titulo from "./Titulo";
-import Image from "next/image";
+import styles from "./Bio.module.css"
+import Titulo from "./Titulo"
+import Image from "next/image"
+import imagenFondo from "../public/static/img/bio.jpg"
 
 export default function Bio() {
   function manejarClick() {
-    console.log("asd123");
+    console.log("asd123")
   }
   return (
     <section id="biografia" className={styles.contenedor}>
-      <Image src="/static/img/bio.jpg" layout="fill" objectFit="cover" />
+      <Image
+        src={imagenFondo}
+        layout="fill"
+        placeholder="blur"
+        objectFit="cover"
+      />
       <Titulo texto="Bio" />
       <div className={styles.cuerpo}>
         <p onClick={manejarClick}>
@@ -39,5 +45,5 @@ export default function Bio() {
         </p>
       </div>
     </section>
-  );
+  )
 }

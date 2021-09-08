@@ -1,6 +1,7 @@
 import styles from "./Discografía.module.css"
 import Titulo from "./Titulo"
 import Image from "next/image"
+import imagenFondo from "../public/static/img/discografía.jpg"
 
 const obras = [
   {
@@ -30,10 +31,11 @@ export default function Discografía() {
   return (
     <section id="discografia" className={styles.contenedorSeccion}>
       <Image
-        src="/static/img/discografía.jpg"
+        // src="/static/img/discografía.jpg"
+        src={imagenFondo}
         layout="fill"
+        placeholder="blur"
         objectFit="cover"
-        quality={100}
       />
       <Titulo texto="Discografía" />
       <div className={styles.contenedorObras}>
