@@ -1,14 +1,14 @@
-import { useState } from "react";
-import styles from "./Nav.module.css";
-import Image from "next/image";
-import useWindowDimensions from "../hooks/useWindowDimensions.ts";
+import { useState } from "react"
+import styles from "./Nav.module.css"
+import Image from "next/image"
+import useWindowDimensions from "../hooks/useWindowDimensions.ts"
 
 const secciones = [
   { nombre: "Audiovisuales", href: "#audiovisuales" },
   { nombre: "Discografía", href: "#discografia" },
   { nombre: "Bio", href: "#biografia" },
   { nombre: "Contacto", href: "#contacto" },
-];
+]
 
 function LogoYunga() {
   return (
@@ -17,12 +17,12 @@ function LogoYunga() {
         <Image src="/static/svg/nav/yunga.svg" width="300" height="100" />
       </div>
     </a>
-  );
+  )
 }
 
 export default function Nav() {
-  const { width } = useWindowDimensions();
-  const [menuAbierto, setMenuAbierto] = useState(false);
+  const { width } = useWindowDimensions()
+  const [menuAbierto, setMenuAbierto] = useState(false)
 
   return (
     <div id="navbar">
@@ -59,23 +59,21 @@ export default function Nav() {
               <div className={styles.barra3}></div>
             </div>
           </div>
-          {/* {menuAbierto && ( */}
-            <div
-              className={`${styles.navMobileMenu} ${
-                menuAbierto ? styles.navMobileMenuAbierto : ""
-              }`}
-            >
-              <ul>
-                {secciones.map((seccion, i) => (
-                  <li key={i} onClick={() => setMenuAbierto(false)}>
-                    <a href={seccion.href}>{seccion.nombre}</a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          {/* )} */}
+          <div
+            className={`${styles.navMobileMenu} ${
+              menuAbierto ? styles.navMobileMenuAbierto : ""
+            }`}
+          >
+            <ul>
+              {secciones.map((seccion, i) => (
+                <li key={i} onClick={() => setMenuAbierto(false)}>
+                  <a href={seccion.href}>{seccion.nombre}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       )}
     </div>
-  );
+  )
 }

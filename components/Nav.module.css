@@ -38,12 +38,17 @@
   text-decoration: none;
 }
 
+.nav li a:hover {
+  color: #92eed7;
+}
+
 .navMobile {
   z-index: 3;
   position: fixed;
   top: 0;
   width: 100%;
-  overflow: auto;
+  height: 3rem;
+  /* overflow: auto; */
 }
 
 .navMobileBarra {
@@ -77,6 +82,7 @@
   letter-spacing: 0.009rem;
   margin: 0;
   padding: 1px;
+  border-radius: 0 0 5px 5px;
 }
 
 .navMobileMenu ul li a {
@@ -91,9 +97,14 @@
   padding: 1.2rem 0;
 }
 
+.navMobileMenu ul li a:hover {
+  color: #92eed7;
+  background-color: #111111;
+}
+
 .navMobileMenu ul li {
   border-bottom: solid 1px #41d3ae52;
-  width: 100%;
+  width: 96%;
 }
 
 .navMobileMenu ul li:last-child {
