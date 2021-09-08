@@ -19,6 +19,8 @@
 
 .formulario input {
   font-size: 1.1rem;
+  /* font-size: .5rem; */
+
   background-color: #e1e1e1;
   align-self: center;
   justify-self: center;
@@ -27,6 +29,10 @@
   height: 52%;
   padding: 0.1rem 0.6rem 0.2rem;
   border: 0;
+}
+
+.formulario input::placeholder {
+  font-size: .9rem;
 }
 
 .formulario textarea {
@@ -41,6 +47,10 @@
   margin: 0.7rem 0 1.7rem;
   padding: 0.3rem 0.6rem 0.3rem;
   border: 0;
+}
+
+.formulario textarea::placeholder {
+  font-size: .9rem;
 }
 
 .boton {

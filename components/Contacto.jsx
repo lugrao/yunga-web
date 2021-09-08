@@ -73,7 +73,7 @@ export default function Contacto() {
           />
           <textarea
             rows="10"
-            placeholder="Consulta"
+            placeholder="Mensaje"
             onChange={(e) => setConsulta(e.target.value)}
           ></textarea>
           <button className={styles.boton}>Enviar</button>
