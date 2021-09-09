@@ -6,6 +6,9 @@ import Discografía from "../components/Discografía"
 import Bio from "../components/Bio"
 import Contacto from "../components/Contacto"
 
+import "semantic-ui-css/semantic.min.css";
+import "react-multi-carousel/lib/styles.css";
+
 export default function Inicio() {
   return (
     <>

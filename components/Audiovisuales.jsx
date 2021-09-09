@@ -4,6 +4,10 @@ import { Carousel } from "react-responsive-carousel"
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 import Image from "next/image"
 import imagenFondo from "../public/static/img/audiovisual.jpg"
+import Carrusel from "./Carrusel"
+
+// import React from 'react'
+import { Embed } from "semantic-ui-react"
 
 const videos = [
   { src: "https://www.youtube.com/embed/Xgx9pg9h9Fc" },
@@ -20,7 +24,7 @@ export default function Audiovisuales() {
         objectFit="cover"
       />
       <Titulo texto="Audiovisuales" />
-      <Carousel
+      {/* <Carousel
         showStatus={false}
         showThumbs={false}
         swipeable={true}
@@ -56,6 +60,8 @@ export default function Audiovisuales() {
           )
         }
       >
+        <Carrusel />
+
         {videos.map((video, idx) => {
           return (
             <div key={idx}>
@@ -75,7 +81,14 @@ export default function Audiovisuales() {
             </div>
           )
         })}
-      </Carousel>
+      </Carousel> */}
+      {/* <Embed
+        id="O6Xo21L0ybE"
+        placeholder="https://react.semantic-ui.com/images/image-16by9.png"
+        source="youtube"
+      /> */}
+     
+      <Carrusel />
     </section>
   )
 }
