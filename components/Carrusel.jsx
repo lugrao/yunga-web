@@ -1,36 +1,50 @@
 import styles from "./Carrusel.module.css"
 import { useState } from "react"
 import Carousel from "react-multi-carousel"
-import Video from "./Video"
+import { Embed } from "semantic-ui-react"
 
-const responsive = {
-  doesntmatter: {
-    breakpoint: { max: 3000, min: 0 },
-    items: 1,
-  },
-}
+const videos = [
+  { id: "Xgx9pg9h9Fc", img: "/static/img/audiovisuales-limbo.webp" },
+  { id: "hNx78lOYRvg", img: "/static/img/audiovisuales-casita.webp" },
+]
 
-const videos = [{ id: "Xgx9pg9h9Fc" }, { id: "hNx78lOYRvg" }]
-
-export default function WithVideo() {
+export default function Carrusel() {
   const [videoActivo, setVideoActivo] = useState(0)
-  console.log(videoActivo)
-
   return (
     <div className={styles.carrusel}>
       <Carousel
         swipeable={true}
         draggable={true}
-        responsive={responsive}
-        afterChange={function (previousSlide, _ref) {
-          var currentSlide = _ref.currentSlide
+        responsive={{
+          device: {
+            breakpoint: { max: 3000, min: 0 },
+            items: 1,
+          },
+        }}
+        afterChange={(previousSlide, _ref) => {
+          let currentSlide = _ref.currentSlide
           _ref.onMove
           return setVideoActivo(currentSlide)
         }}
       >
         {videos.map((video, i) => {
           return (
-            <Video id={video.id} activo={videoActivo == i} key={video.id} />
+            videoActivo == i ? (
+              <Embed
+                key={video.id}
+                hd={false}
+                id={video.id}
+                source="youtube"
+                autoplay={true}
+                placeholder={video.img}
+                iframe={{
+                  allowFullScreen: true,
+                  allow: "autoplay",
+                }}
+              />
+            ) : (
+              <Embed key={video.id} active={false} placeholder={video.img} />
+            )
           )
         })}
       </Carousel>
