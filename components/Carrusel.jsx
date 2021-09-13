@@ -10,13 +10,11 @@ const videos = [
     titulo: "Casita",
     id: "hNx78lOYRvg",
     img: "/static/img/audiovisuales-casita.webp",
-    thumbnail: "/static/img/audiovisuales-casita-thumbnail.webp",
   },
   {
     titulo: "Limbo",
     id: "Xgx9pg9h9Fc",
     img: "/static/img/audiovisuales-limbo.webp",
-    thumbnail: "/static/img/audiovisuales-limbo-thumbnail.webp",
   },
 ]
 
@@ -29,7 +27,7 @@ const CustomDot = ({ onClick, ...rest }) => {
   } = rest
 
   const thumbnails = videos.map((video) => (
-    <Image src={video.thumbnail} height={50} width={90} />
+    <Image src={video.img} height={50} width={90} />
   ))
   return (
     <div
@@ -47,6 +45,7 @@ const CustomDot = ({ onClick, ...rest }) => {
 
 export default function Carrusel() {
   const [videoActivo, setVideoActivo] = useState(0)
+  const [videoClickeado, setVideoClickeado] = useState(false)
   return (
     <div className={styles.carrusel}>
       <Carousel
@@ -64,32 +63,54 @@ export default function Carrusel() {
         afterChange={(previousSlide, _ref) => {
           let currentSlide = _ref.currentSlide
           _ref.onMove
-          return setVideoActivo(currentSlide)
+          // return setVideoActivo(currentSlide)
+          if (currentSlide !== previousSlide) setVideoClickeado(false)
+          setVideoActivo(currentSlide)
         }}
       >
         {videos.map((video, i) => {
           return videoActivo == i ? (
-            <Embed
-              className={styles.embed}
-              icon=""
-              key={video.id}
-              hd={false}
-              id={video.id}
-              source="youtube"
-              autoplay={true}
-              placeholder={video.img}
-              iframe={{
-                allowFullScreen: true,
-                allow: "autoplay",
-              }}
-            />
+            <div onClick={() => setVideoClickeado(true)}>
+              <Embed
+                className={styles.embed}
+                icon=""
+                key={video.id}
+                hd={false}
+                id={video.id}
+                source="youtube"
+                autoplay={true}
+                placeholder={video.img}
+                iframe={{
+                  allowFullScreen: true,
+                  allow: "autoplay",
+                }}
+              />
+              {!videoClickeado && (
+                <div className={styles.botonYoutube}>
+                  <Image
+                    src="/static/svg/discografía/youtube.svg"
+                    width={100}
+                    height={100}
+                  />
+                </div>
+              )}
+            </div>
           ) : (
-            <Embed
-              icon=""
-              key={video.id}
-              active={false}
-              placeholder={video.img}
-            />
+            <div>
+              <Embed
+                icon=""
+                key={video.id}
+                active={false}
+                placeholder={video.img}
+              />
+              <div className={styles.botonYoutube}>
+                <Image
+                  src="/static/svg/discografía/youtube.svg"
+                  width={100}
+                  height={100}
+                />
+              </div>
+            </div>
           )
         })}
       </Carousel>

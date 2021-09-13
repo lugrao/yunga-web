@@ -55,7 +55,6 @@ export default function Discografía() {
                 <a href={obra.youtube} target="_blank" alt="Link a YouTube">
                   <Image
                     src="/static/svg/discografía/youtube.svg"
-                    target="_blank"
                     height="50"
                     width="50"
                   />

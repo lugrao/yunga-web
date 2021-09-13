@@ -25,3 +25,12 @@
 .thumbnailMascara:hover {
   opacity: 0.6;
 }
+
+.botonYoutube {
+  position: absolute;
+  /* z-index: 1; */
+  left: 50%;
+  margin-left: -50px;
+  top: 50%;
+  margin-top: -50px;
+}
