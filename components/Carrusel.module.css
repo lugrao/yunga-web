@@ -13,7 +13,15 @@
   margin: 0 3px 7rem;
 }
 
+.thumbnail:hover {
+  cursor: pointer;
+}
+
 .thumbnailMascara {
   background-color: black;
   opacity: 0.5;
+}
+
+.thumbnailMascara:hover {
+  opacity: 0.6;
 }

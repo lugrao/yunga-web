@@ -6,8 +6,18 @@ import Image from "next/image"
 import React from "react"
 
 const videos = [
-  { id: "Xgx9pg9h9Fc", img: "/static/img/audiovisuales-limbo.webp" },
-  { id: "hNx78lOYRvg", img: "/static/img/audiovisuales-casita.webp" },
+  {
+    titulo: "Casita",
+    id: "hNx78lOYRvg",
+    img: "/static/img/audiovisuales-casita.webp",
+    thumbnail: "/static/img/audiovisuales-casita-thumbnail.webp",
+  },
+  {
+    titulo: "Limbo",
+    id: "Xgx9pg9h9Fc",
+    img: "/static/img/audiovisuales-limbo.webp",
+    thumbnail: "/static/img/audiovisuales-limbo-thumbnail.webp",
+  },
 ]
 
 const CustomDot = ({ onClick, ...rest }) => {
@@ -18,34 +28,16 @@ const CustomDot = ({ onClick, ...rest }) => {
     // carouselState: { currentSlide, deviceType },
   } = rest
 
-  const thumbnails = videos.map((video, i) => (
-    <Image src={video.img} height={50} width={90} />
+  const thumbnails = videos.map((video) => (
+    <Image src={video.thumbnail} height={50} width={90} />
   ))
-  // onMove means if dragging or swiping in progress.
-  // active is provided by this lib for checking if the item is active or not.
   return (
     <div
       className={`${styles.thumbnail} ${!active && styles.thumbnailMascara}`}
-      // style={{
-      //   height: 50,
-      //   width: 90,
-      //   backgroundColor: "black",
-      //   opacity: active ? 1 : 0.5,
-      //   padding: 0,
-      //   margin: "0 3px",
-      //   border: "none",
-      // }}
     >
       <button
         className={`${styles.thumbnail} ${active ? "active" : "inactive"}`}
         onClick={() => onClick()}
-        // style={{
-        //   height: 50,
-        //   width: 90,
-        //   border: "none",
-        //   padding: 0,
-        //   margin: "0 3px",
-        // }}
       >
         {React.Children.toArray(thumbnails)[index]}
       </button>
@@ -63,7 +55,6 @@ export default function Carrusel() {
         showDots
         customDot={<CustomDot />}
         renderDotsOutside
-        // renderButtonGroupOutside
         responsive={{
           device: {
             breakpoint: { max: 3000, min: 0 },
@@ -79,6 +70,8 @@ export default function Carrusel() {
         {videos.map((video, i) => {
           return videoActivo == i ? (
             <Embed
+              className={styles.embed}
+              icon=""
               key={video.id}
               hd={false}
               id={video.id}
@@ -91,7 +84,12 @@ export default function Carrusel() {
               }}
             />
           ) : (
-            <Embed key={video.id} active={false} placeholder={video.img} />
+            <Embed
+              icon=""
+              key={video.id}
+              active={false}
+              placeholder={video.img}
+            />
           )
         })}
       </Carousel>
