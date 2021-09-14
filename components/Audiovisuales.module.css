@@ -5,6 +5,7 @@
   display: grid;
   position: relative;
   padding-bottom: 12rem;
+  scroll-margin: 2.7rem 0 0;
 }
 
 .boton {

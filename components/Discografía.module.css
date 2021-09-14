@@ -4,6 +4,7 @@
   /* background-size: cover; */
   position: relative;
   padding-bottom: 5rem;
+  scroll-margin: 2.7rem 0 0;
 }
 
 .contenedorObras {

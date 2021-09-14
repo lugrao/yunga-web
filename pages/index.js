@@ -34,6 +34,7 @@ export default function Inicio() {
           scroll-behavior: smooth;
         }
         body {
+          scroll-snap-type: y mandatory;
           margin: 0;
         }
       `}</style>
