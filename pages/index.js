@@ -5,11 +5,12 @@ import Audiovisuales from "../components/Audiovisuales"
 import Discografía from "../components/Discografía"
 import Bio from "../components/Bio"
 import Contacto from "../components/Contacto"
-
-import "semantic-ui-css/semantic.min.css";
-import "react-multi-carousel/lib/styles.css";
+import useWindowDimensions from "../hooks/useWindowDimensions.ts"
+import "semantic-ui-css/semantic.min.css"
+import "react-multi-carousel/lib/styles.css"
 
 export default function Inicio() {
+  const { width } = useWindowDimensions()
   return (
     <>
       <Head>
@@ -23,10 +24,10 @@ export default function Inicio() {
           rel="stylesheet"
         />
       </Head>
-      <Nav />
-      <Portada />
+      <Nav width={width} />
+      <Portada width={width} />
       <Audiovisuales />
-      <Discografía />
+      <Discografía width={width} />
       <Bio />
       <Contacto />
       <style jsx global>{`

@@ -1,10 +1,7 @@
-import styles from "./Portada.module.css";
-import Link from "next/link";
-import useWindowDimensions from "../hooks/useWindowDimensions.ts";
+import styles from "./Portada.module.css"
+import Link from "next/link"
 
-export default function Portada() {
-  const { width } = useWindowDimensions();
-
+export default function Portada({ width }) {
   return (
     <section id="portada" className={styles.contenedor}>
       {width < 769 && (
@@ -23,5 +20,5 @@ export default function Portada() {
         </a>
       </Link>
     </section>
-  );
+  )
 }

@@ -1,7 +1,6 @@
 import { useState } from "react"
 import styles from "./Nav.module.css"
 import Image from "next/image"
-import useWindowDimensions from "../hooks/useWindowDimensions.ts"
 
 const secciones = [
   { nombre: "Audiovisuales", href: "#audiovisuales" },
@@ -20,10 +19,8 @@ function LogoYunga() {
   )
 }
 
-export default function Nav() {
-  const { width } = useWindowDimensions()
+export default function Nav({ width }) {
   const [menuAbierto, setMenuAbierto] = useState(false)
-
   return (
     <div id="navbar">
       {width >= 768 ? (
