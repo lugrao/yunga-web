@@ -2,6 +2,7 @@ import styles from "./Discografía.module.css"
 import Titulo from "./Titulo"
 import Image from "next/image"
 import imagenFondo from "../public/static/img/discografía.jpg"
+import imagenFondoMobile from "../public/static/img/discografía-mobile.png"
 
 const obras = [
   {
@@ -30,7 +31,7 @@ const obras = [
 export default function Discografía({ width }) {
   return (
     <section id="discografia" className={styles.contenedorSeccion}>
-      {width > 768 && (
+      {width > 768 ? (
         <Image
           src={imagenFondo}
           layout="fill"
@@ -38,6 +39,18 @@ export default function Discografía({ width }) {
           objectFit="cover"
           // quality={100}
         />
+      ) : (
+        <div className={styles.imgMobile}>
+          <Image
+            src={imagenFondoMobile}
+            // layout="fill"
+            placeholder="blur"
+            // objectFit="cover"
+            width={908}
+            height={499}
+            // quality={100}
+          />
+        </div>
       )}
 
       <Titulo texto="Discografía" />
