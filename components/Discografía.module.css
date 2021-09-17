@@ -78,7 +78,6 @@
 @media (max-width: 768px) {
   .contenedorSeccion {
     background: linear-gradient(#41d3ae, #2667ad, #8a5c85);
-    /* background-image: url(/static/img/audiovisuales-ballena.png); */
   }
 
   .obra {
