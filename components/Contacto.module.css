@@ -32,7 +32,7 @@
 }
 
 .formulario input::placeholder {
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 .formulario textarea {
@@ -50,7 +50,7 @@
 }
 
 .formulario textarea::placeholder {
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 .boton {

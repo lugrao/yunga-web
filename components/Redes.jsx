@@ -1,5 +1,5 @@
-import styles from "./Redes.module.css";
-import Image from "next/image";
+import styles from "./Redes.module.css"
+import Image from "next/image"
 
 const redes = [
   {
@@ -18,7 +18,7 @@ const redes = [
     nombre: "instagram",
     url: "https://www.instagram.com/yunga.audiovisual/",
   },
-];
+]
 
 export default function Redes() {
   return (
@@ -34,5 +34,5 @@ export default function Redes() {
         </a>
       ))}
     </div>
-  );
+  )
 }
