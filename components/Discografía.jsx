@@ -37,18 +37,14 @@ export default function Discografía({ width }) {
           layout="fill"
           placeholder="blur"
           objectFit="cover"
-          // quality={100}
         />
       ) : (
         <div className={styles.imgMobile}>
           <Image
             src={imagenFondoMobile}
-            // layout="fill"
             placeholder="blur"
-            // objectFit="cover"
             width={908}
             height={499}
-            // quality={100}
           />
         </div>
       )}
