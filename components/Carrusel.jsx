@@ -70,11 +70,10 @@ export default function Carrusel() {
       >
         {videos.map((video, i) => {
           return videoActivo == i ? (
-            <div onClick={() => setVideoClickeado(true)}>
+            <div key={i} onClick={() => setVideoClickeado(true)}>
               <Embed
                 className={styles.embed}
                 icon=""
-                key={video.id}
                 hd={false}
                 id={video.id}
                 source="youtube"
@@ -96,7 +95,7 @@ export default function Carrusel() {
               )}
             </div>
           ) : (
-            <div>
+            <div key={i}>
               <Embed
                 icon=""
                 key={video.id}
