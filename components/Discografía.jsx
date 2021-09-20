@@ -28,7 +28,7 @@ const obras = [
   },
 ]
 
-export default function Discografía({ width }) {
+export default function Discografía({ width, fotoMobile }) {
   return (
     <section id="discografia" className={styles.contenedorSeccion}>
       {width > 768 ? (
@@ -41,8 +41,9 @@ export default function Discografía({ width }) {
       ) : (
         <div className={styles.imgMobile}>
           <Image
-            src={imagenFondoMobile}
-            placeholder="blur"
+            // src={imagenFondoMobile}
+            src={"https://drive.google.com/uc?id=" + fotoMobile + "&export=download"}
+            // placeholder="blur"
             width={908}
             height={499}
           />
