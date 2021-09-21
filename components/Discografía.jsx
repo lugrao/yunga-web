@@ -43,6 +43,7 @@ export default function Discografía({ width, fotoMobile }) {
           <Image
             // src={imagenFondoMobile}
             src={"https://drive.google.com/uc?id=" + fotoMobile + "&export=download"}
+            loading="eager"
             // placeholder="blur"
             width={908}
             height={499}
