@@ -17,6 +17,7 @@ export default function Inicio({ sheetData }) {
     <>
       <Head>
         <title>Yunga</title>
+        <link rel="shortcut icon" href="/static/favicon-Yunga-16px.png" />
         <link
           href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
           rel="stylesheet"
@@ -50,11 +51,10 @@ export default function Inicio({ sheetData }) {
 
 export async function getStaticProps() {
   const sheetData = await assetSheet()
-  console.log(sheetData + "desde getStaticProps")
   return {
     props: {
       sheetData,
     },
-    // revalidate: 1, // In seconds
+    revalidate: 30, // In seconds
   }
 }
